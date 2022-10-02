@@ -1,7 +1,11 @@
-import express, { application } from 'express';
+import express from 'express';
+import connectDatabase from './config/db';
 
 //Initialize Express application
 const bookstoreApp = express();
+
+//Connect Database 
+connectDatabase();
 
 //Create API Endpoints
 bookstoreApp.get('/', (req, res) =>
